@@ -1,0 +1,9 @@
+// This program will generate a random quote when the "Get Another Quote" button is clicked.
+// create a variable called quote the system can read to produce quotes stored.
+// Brackets are made to store six Arrays which will be the quotes written out inside of the quote variable.
+// Quotes and its sources which are the authors and or dates of submission are combined by brackets but spaced by commas 
+// A function is then created to call the quotes. 
+// A function is then created to store the number of quotes to randomly choose from called the Math Floor.
+// A PRINT function is then called to print the selected quotes to the screen, allowing the quotes to appear after "Get Another Quote" button is clicked.
+// A function to run the "Click for Another Quote" button is then added.
+//"IF" the "Click for Another Quote" button is clicked a New quote should appear.
