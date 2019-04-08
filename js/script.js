@@ -1,4 +1,4 @@
-/ This program will generate a new random quote when prompted//
+// This program will generate a new random quote when prompted//
 
 
 //If random quote button is clicked these quotes will be randomly picked//
@@ -27,24 +27,49 @@ var quotes = [
    source: "-Confucius"
   }];
  
-var source ={} 
-  source= {'-Francis of Assisi':'-Theodore Roosevelt','-Confucius':'-Thomas A Edison','-Confucius':'-Sam Levenson'};
+var source =[
+  {source: "ToniHammond, FrancisOfAssisi, TheodoreRoosevelt, Confucius, ThomasAEdison, Confucius, SamLevenson"
+  }];
+
+console.log 
+
 
 //A function for a new random quote is called//
 
-var randomQuote = Math.floor(Math.random() ("quote".length))
+function getRandomQuote () {
 
-  function printQuote(){
-    var quote= '<p class="quote"> '+ source+'</p>'
-    var source= '<p class="source"> '+ quote+'</p>'
-    var citation='<p class="citation"> '+ citation+'</p>'
-    var year='<p class="year"> '+ year+ '</p>'
-    var quoteBox = document.getElementById("quote-Box");
-    quoteBox.innerHTML=quote;
+  var randomQuote=Math.floor(Math.random() *quotes.length);
+  return quotes[randomQuote]
+}
+
+// a function to print the quote to screen is called//
+
+  function printQuote () {
+    var list =getRandomQuote ();
+    var elements = "";
+
+    elements+= '<p class="quote">' + list.quote + "</p>";
+    elements+= '<p class="source">' + list.source; 
+
+// If quote contains a citation it will be called along with the quote//
+
+if (quotes.citation) {
+  elements += '<span class="citation">' + list.citation + "</span>"
+
+}
+//If the quote contains a year it will be called along with the quote//
+
+if(quotes.year) {
+  elements += '<span class="year">' + list.year + "</span>";
+}
+
+//Calling quotes stored in the quote.box in the inner HTML//
+    elements +="</p>";
+    var quotebox= document.getElementById("quote-box");
+quotebox.innerHTML= elements;
   
-  
-};
+} 
 
-
+console.log
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
