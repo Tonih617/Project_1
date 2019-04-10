@@ -61,13 +61,13 @@ function getRandomQuote () {
 
 // If quote contains a citation it will be called along with the quote//
 
-if (quotes.citation) {
-  elements += '<span class="citation">' + list.citation + "</span>"
+if (list.citation ) {
+  elements += '<span class="citation">' + list.citation + "</span>";
 
 }
 //If the quote contains a year it will be called along with the quote//
 
-if(quotes.year) {
+if(quotes.year ) {
   elements += '<span class="year">' + list.year + "</span>";
 }
 
@@ -81,4 +81,3 @@ quotebox.innerHTML= elements;
 console.log
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
